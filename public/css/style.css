@@ -82,3 +82,22 @@ body {
     color: #c4b5fd;
     text-decoration: none;
   }
+  .applications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .application-card {
+    background-color: #1f1f29;
+    padding: 20px;
+    border-radius: 16px;
+  }
+  
+  .company-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 16px;
+  }

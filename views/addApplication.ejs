@@ -15,12 +15,10 @@ Contains:
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
-
 <!DOCTYPE html>
 <html>
 <head>
   <title>Add Application</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
@@ -29,20 +27,20 @@ Contains:
 <body>
   <div class="page-container">
     <h1>Add Internship Application</h1>
-    <p class="subtitle">Track a new role, company, and application status.</p>
+    <p class="subtitle">Save a company, role, status, and notes.</p>
 
     <form action="/applications/add" method="POST" class="application-form">
-      <label for="company">Company Name</label>
-      <input type="text" id="company" name="company" placeholder="Example: Nike" required>
+      <label>Company Name</label>
+      <input type="text" name="company" placeholder="Example: Google" required>
 
-      <label for="companyDomain">Company Website Domain</label>
-      <input type="text" id="companyDomain" name="companyDomain" placeholder="Example: nike.com" required>
+      <label>Company Domain</label>
+      <input type="text" name="companyDomain" placeholder="Example: google.com" required>
 
-      <label for="role">Role Title</label>
-      <input type="text" id="role" name="role" placeholder="Example: Brand Marketing Intern" required>
+      <label>Role Title</label>
+      <input type="text" name="role" placeholder="Example: Marketing Intern" required>
 
-      <label for="status">Status</label>
-      <select id="status" name="status" required>
+      <label>Status</label>
+      <select name="status" required>
         <option value="Wishlist">Wishlist</option>
         <option value="Applied">Applied</option>
         <option value="Interview">Interview</option>
@@ -51,22 +49,22 @@ Contains:
         <option value="Rejected">Rejected</option>
       </select>
 
-      <label for="appliedDate">Date Applied</label>
-      <input type="date" id="appliedDate" name="appliedDate">
+      <label>Date Applied</label>
+      <input type="date" name="appliedDate">
 
-      <label for="location">Location</label>
-      <input type="text" id="location" name="location" placeholder="Example: New York, Remote">
+      <label>Location</label>
+      <input type="text" name="location" placeholder="Example: Remote, NYC, DC">
 
-      <label for="applicationLink">Application Link</label>
-      <input type="url" id="applicationLink" name="applicationLink" placeholder="https://...">
+      <label>Application Link</label>
+      <input type="url" name="applicationLink" placeholder="https://...">
 
-      <label for="notes">Notes</label>
-      <textarea id="notes" name="notes" rows="5" placeholder="Add interview notes, recruiter names, deadlines, etc."></textarea>
+      <label>Notes</label>
+      <textarea name="notes" rows="5" placeholder="Recruiter name, deadlines, interview notes, etc."></textarea>
 
       <button type="submit">Save Application</button>
     </form>
 
-    <a href="/applications" class="back-link">View All Applications</a>
+    <a href="/" class="back-link">Back Home</a>
   </div>
 </body>
 </html>

@@ -6,3 +6,18 @@ Responsibilites:
 
     
 */ 
+const mongoose = require("mongoose");
+
+const applicationSchema = new mongoose.Schema({
+  company: String,
+  companyDomain: String,
+  logoUrl: String,
+  role: String,
+  status: String,
+  appliedDate: Date,
+  location: String,
+  applicationLink: String,
+  notes: String
+});
+
+module.exports = mongoose.model("Application", applicationSchema);
