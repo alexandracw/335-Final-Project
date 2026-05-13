@@ -4,8 +4,50 @@ Displays all saved internship applications.
 Responsibilities
 - Loops through MongoDB data
 - Displays applications as cards/tables
-- Shows company logos from API -->
+- Shows company logos from API 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Applications</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="page-container">
+    <h1>My Applications</h1>
+    <a href="/applications/add" class="back-link">+ Add New</a>
+
+    <% if (applications.length === 0) { %>
+      <p>No applications yet!</p>
+    <% } else { %>
+      <% applications.forEach(app => { %>
+        <div class="application-card">
+          <img src="<%= app.logoUrl %>" alt="logo" width="40">
+          <h2><%= app.company %></h2>
+          <p><strong>Role:</strong> <%= app.role %></p>
+          <p><strong>Status:</strong> <%= app.status %></p>
+          <p><strong>Location:</strong> <%= app.location %></p>
+          <p><strong>Notes:</strong> <%= app.notes %></p>
+
+          <form action="/applications/delete" method="POST">
+            <input type="hidden" name="id" value="<%= app._id %>">
+            <button type="submit">Delete</button>
+          </form>
+
+          <hr>
+        </div>
+      <% }) %>
+    <% } %>
+
+    <a href="/" class="back-link">Back Home</a>
+  </div>
+</body>
+</html>

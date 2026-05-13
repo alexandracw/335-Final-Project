@@ -45,6 +45,11 @@ router.post("/add", async (req, res) => {
   res.redirect("/applications");
 });
 
+router.post("/delete", async (req, res) => {
+  await Application.findByIdAndDelete(req.body.id);
+  res.redirect("/applications");
+});
+
 router.get("/", async (req, res) => {
 
   const applications = await Application.find();
