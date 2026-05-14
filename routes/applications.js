@@ -24,9 +24,15 @@ router.get("/add", (req, res) => {
 
 router.post("/add", async (req, res) => {
 
-  const companyDomain = req.body.companyDomain;
+  let companyDomain = req.body.companyDomain;
 
-  const logoUrl = `https://img.logo.dev/${companyDomain}`;
+  companyDomain = companyDomain
+    .replace("https://", "")
+    .replace("http://", "")
+    .replace("www.", "")
+    .split("/")[0];
+
+  const logoUrl = `https://img.logo.dev/${companyDomain}?token=${process.env.LOGO_API_KEY}`;
 
   const newApplication = new Application({
     company: req.body.company,

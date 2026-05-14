@@ -2,7 +2,7 @@
 
 **Submitted by:** PERSON WHO SUBMITS
 
-**Group Members:** Alexandra White (awhite31), Adam Lingelbach (alingelb), Cooper Hichkad (chichkad)
+**Group Members:** Alexandra White (awhite31), Adam Lingelbach (alingelb), Cooper Hichkad (chichkad), Jackson Wheeler (jwheel05)
 
 **App Description:** Internship Tracker is a web application that allows users to track internship and job applications, save notes, organize application statuses, and view company logos automatically using an external API.
 
