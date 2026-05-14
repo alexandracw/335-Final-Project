@@ -1,6 +1,6 @@
 # Internship Tracker
 
-**Submitted by:** Alexandra White
+**Submitted by:** Adam Lingelbach (alingelb)
 
 **Group Members:** Alexandra White (awhite31), Adam Lingelbach (alingelb), Cooper Hichkad (chichkad), Jackson Wheeler (jwheel05)
 
